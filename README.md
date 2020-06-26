@@ -1,7 +1,6 @@
 # Try-First
 
-The following project is an implementation of the paper "VITON: An Image-based Virtual Try-on Network" from University of Maryland, College Park, China.  
-https://arxiv.org/abs/1711.08447
+The following project is an implementation of the paper "VITON: An Image-based Virtual Try-on Network" from University of Maryland, College Park, China. https://arxiv.org/abs/1711.08447
 
 ## Installation
 ### Prerequisites
@@ -22,11 +21,10 @@ The person representation used in this project are extracted by a 2D pose estima
 ### 
 Please downloads the Model files from the links provided below in the appropriate locations.
 
-1. TOM Model - https://drive.google.com/file/d/1u_Sih08XFxl0DTBzd7oXBqKiDsTNcp_x/view?usp=sharing
-2. GMM Model - https://drive.google.com/file/d/1u-t_gMOve8ZzT_lGGWg04vWkJAEb2qx-/view?usp=sharing
-3. Pose Vector Model - https://drive.google.com/file/d/1JO_PU2ZD-Jgs9egWQQOnXX92OOodIsyx/view?usp=sharing
-4. Pose Parser Model - https://drive.google.com/file/d/1bOEbiJgxshbaNFrrw-Ek-dfcC_tKb27R/view?usp=sharing
-- 
+1. <a href="https://drive.google.com/file/d/1u_Sih08XFxl0DTBzd7oXBqKiDsTNcp_x/view?usp=sharing">TOM Model</a>
+2. <a href="https://drive.google.com/file/d/1u-t_gMOve8ZzT_lGGWg04vWkJAEb2qx-/view?usp=sharing">GMM Model</a>
+3. <a href="https://drive.google.com/file/d/1JO_PU2ZD-Jgs9egWQQOnXX92OOodIsyx/view?usp=sharing">Pose Vector Model</a>
+4. <a href="https://drive.google.com/file/d/1bOEbiJgxshbaNFrrw-Ek-dfcC_tKb27R/view?usp=sharing">Pose Parser Model</a>
 
 
 ### Download repository
