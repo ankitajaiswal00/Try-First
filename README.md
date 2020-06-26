@@ -2,6 +2,33 @@
 
 The following project is an implementation of the paper "VITON: An Image-based Virtual Try-on Network" from University of Maryland, College Park, China. https://arxiv.org/abs/1711.08447
 
+## Table of contents
+* [Introduction](#introduction)
+* [Implementation Details](#Implementation_details)
+* [Training Process](#Training_Process)
+* [Installation](#Installation)
+
+## Introduction :-
+TryFirst is an interactive web-app which benefits users by allowing them to try-on a particular cloth to see how it suits them.
+Thus, allowing consumers to virtually try on clothes will not only enhance their shopping experience, transforming the way
+people shop for clothes, but also save cost for retailer. 
+
+## Implemenetation_details
+* Pose Generation using openpose.
+* Parser are generated using SS-nan (opensource pre-trained model) . 
+* Used Generative Adversarial Networks with Adversarial loss, perceptual loss and L1 loss for smoothening.
+* Used U-Net for generator and a downsampler for discriminator.
+
+## Training Process
+* The pose generated and parser and person image are concatenated along with and cloth imgae are fedded to GMM.
+* output of above is a warped cloth.
+* Now that concatenated image along with warped cloth is feeded to Gans.
+* Final output is image of person wearing desired cloth.
+* Final loss of generator on validation : 3.62001
+* Final loss of discriminator on validation :0.003821
+* Epochs Trained : 50
+* Optimizer : Ranger
+
 ## Installation
 ### Prerequisites
 
@@ -43,6 +70,9 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+## Outputs
+<img src='https://github.com/hackabit19/Fakes/blob/master/Results/000164_0.jpg' /></t><img src='https://github.com/hackabit19/Fakes/blob/master/Results/000164_0.png' /><img src='https://github.com/hackabit19/Fakes/blob/master/Results/000568_1.jpg' />
+</br>
 
 
 
