@@ -19,7 +19,7 @@ The person representation used in this project are extracted by a 2D pose estima
 
 
 ### 
-Please downloads the Model files from the links provided below in the appropriate locations.
+Download the Model files from the links provided below in the appropriate locations.
 
 1. <a href="https://drive.google.com/file/d/1u_Sih08XFxl0DTBzd7oXBqKiDsTNcp_x/view?usp=sharing">TOM Model</a>
 2. <a href="https://drive.google.com/file/d/1u-t_gMOve8ZzT_lGGWg04vWkJAEb2qx-/view?usp=sharing">GMM Model</a>
