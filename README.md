@@ -3,9 +3,9 @@
 The following project is an implementation of the paper "VITON: An Image-based Virtual Try-on Network" from University of Maryland, College Park, China. https://arxiv.org/abs/1711.08447
 
 ## Table of contents
-* [Introduction](#introduction)
-* [Implementation Details](#Implementation_details)
-* [Training Process](#Training_Process)
+* [Introduction](#Introduction)
+* [Implementation Details](#Implementation details)
+* [Training Process](#Training Process)
 * [Installation](#Installation)
 
 ## Introduction :-
