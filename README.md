@@ -4,8 +4,8 @@ The following project is an implementation of the paper "VITON: An Image-based V
 
 ## Table of contents
 * [Introduction](#Introduction)
-* [Implementation Details](#Implementation details)
-* [Training Process](#Training Process)
+* [Implementation Details](#Implementation_Details)
+* [Training Process](#Training_Process)
 * [Installation](#Installation)
 
 ## Introduction :-
