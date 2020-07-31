@@ -69,6 +69,12 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
+                 or
+               
+ To run the Web-App: 
+``` 
+python main5.py
+```
 
 ## Outputs
 <img src='https://github.com/hackabit19/Fakes/blob/master/Results/000164_0.jpg' /></t><img src='https://github.com/hackabit19/Fakes/blob/master/Results/000164_0.png' /><img src='https://github.com/hackabit19/Fakes/blob/master/Results/000568_1.jpg' />
