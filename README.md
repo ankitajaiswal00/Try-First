@@ -69,12 +69,26 @@ pip install -r requirements.txt
 ```
 streamlit run app.py
 ```
-                 or
                
- To run the Web-App: 
+ 
+## To localhost the website:
+To run the Web-App: 
 ``` 
 python main5.py
+
 ```
+
+## Screenshots From Website:
+
+HomePage:
+<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/homepg.png' /> <t>
+  
+Collection:
+<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/collection.png/> <t>
+          
+Size Predictor:
+<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/size%20predictor%20form.png/><t>
+
 
 ## Outputs
 <img src='https://github.com/hackabit19/Fakes/blob/master/Results/000164_0.jpg' /></t><img src='https://github.com/hackabit19/Fakes/blob/master/Results/000164_0.png' /><img src='https://github.com/hackabit19/Fakes/blob/master/Results/000568_1.jpg' />
