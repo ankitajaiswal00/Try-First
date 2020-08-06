@@ -79,15 +79,15 @@ python main5.py
 ```
 
 ## Screenshots From Website:
-
+<br>
 HomePage:
 <img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/homepg.png' /> <t>
   
 Collection:
-<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/collection.png/> <t>
+<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/collection.png' /> <br>
           
 Size Predictor:
-<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/size%20predictor%20form.png/><t>
+<img src='https://github.com/JaZz-9/Try-First/blob/master/Outputs/website%20ss/size%20predictor%20form.png' /><br>
 
 
 ## Outputs
