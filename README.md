@@ -43,6 +43,8 @@ PIL
 PyTorch
 TorchVision
 tqdm
+dlib
+OpenCV
 ```
 
 ### Person representation extraction
