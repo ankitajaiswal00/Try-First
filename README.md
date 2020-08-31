@@ -8,10 +8,16 @@ The following project is an implementation of the paper "VITON: An Image-based V
 * [Training Process](#Training_Process)
 * [Installation](#Installation)
 
-## Introduction :-
+## Introduction:-
 TryFirst is an interactive web-app which benefits users by allowing them to try-on a particular cloth to see how it suits them.
 Thus, allowing consumers to virtually try on clothes will not only enhance their shopping experience, transforming the way
 people shop for clothes, but also save cost for retailer. 
+
+## Features:-
+* Users can avail the option to try apparels virtually
+* Similarily, one can try face masks virtually
+* Size recommending model to solve queries regarding differennt size charts from different brands.
+
 
 ## Implemenetation_details
 * Pose Generation using openpose.
@@ -74,7 +80,7 @@ streamlit run app.py
 ## To localhost the website:
 To run the Web-App: 
 ``` 
-python main5.py
+python main.py
 
 ```
 
