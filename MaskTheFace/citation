@@ -1,0 +1,8 @@
+@misc{anwar2020masked,
+title={Masked Face Recognition for Secure Authentication},
+author={Aqeel Anwar and Arijit Raychowdhury},
+year={2020},
+eprint={2008.11104},
+archivePrefix={arXiv},
+primaryClass={cs.CV}
+} 
