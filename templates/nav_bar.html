@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+
+      <nav class="nav-menu d-none d-lg-block">
+          <ul>
+          <li><a href="{{ url_for('index') }}" target="_blank">HOME</a></li>
+          <li class="drop-down"><a>PORTFOLIO</a>
+            <ul>
+              <li class="drop-down"><a>APPARELS</a> 
+              	<ul>          	
+              	<li><a href="{{ url_for('party') }}" target="_blank">TRENDINGS</a></li>
+              	<li><a href="{{ url_for('sports') }}" target="_blank">SPORTS</a></li>
+              	<li><a href="{{ url_for('brands') }}" target="_blank">BRANDS & U</a></li>
+              	<li><a href="{{ url_for('casuals') }}" target="_blank">CASUALS</a></li>
+              	<li><a href="{{ url_for('tshirt') }}" target="_blank">T-SHIRTS</a></li>
+                </ul>
+              <li><a href="{{ url_for('facemask') }}" target="_blank">FACE MASKS</a></li>              
+            </ul>
+          </li>
+         <li class="drop-down"><a>OUR SERVICES</a>
+            <ul>
+              <li><a href="{{ url_for('services_tryon') }}" target="_blank">TRY IT ON YOURSELF</a></li>
+              <li><a href="{{ url_for('services_sizep') }}" target="_blank">YOUR PERFECT SIZE FIT</a></li>
+              <!-- <li><a href="#">MASK IT ON</a></li> -->
+            </ul>
+          </li>                    
+          <li><a href="{{ url_for('blog') }}" target="_blank">BLOG</a></li>
+          <li><a href="{{ url_for('about') }}" target="_blank">ABOUT US</a></li>
+
+          </ul>
+      </nav><!-- .nav-menu -->
+
+    
+  <div class="container", align="right">
+      {% block content %}
+
+
+      
+      {% endblock %}
+  </div>
+</body>
+</html>

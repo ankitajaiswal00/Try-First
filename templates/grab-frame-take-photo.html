@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./grab-frame-take-photo.css">
+    <script src="./grab-frame-take-photo.js"></script>--> 
+    <title>Food Chain</title>
+</head>
+<body>
+    
+    
+    <div id='results'>
+      <div>
+        <video autoplay></video>
+        <button id='getUserMediaButton'>Get User Media</button>
+      </div>
+      <div>
+        <canvas id='grabFrameCanvas'></canvas>
+        <button id='grabFrameButton' disabled>Grab Frame</button>
+      </div>
+      <div>
+        <canvas id='takePhotoCanvas'></canvas>
+        <button id='takePhotoButton' disabled>Take Photo</button>
+      </div>
+    </div>
+    
+    
+    
+    <script>
+      document.querySelector('#getUserMediaButton').addEventListener('click', onGetUserMediaButtonClick);
+      document.querySelector('#grabFrameButton').addEventListener('click', onGrabFrameButtonClick);
+      document.querySelector('#takePhotoButton').addEventListener('click', onTakePhotoButtonClick);
+    </script>
+
+<script>
+    var imageCapture;
+
+function onGetUserMediaButtonClick() {
+  navigator.mediaDevices.getUserMedia({video: true})
+  .then(mediaStream => {
+    document.querySelector('video').srcObject = mediaStream;
+
+    const track = mediaStream.getVideoTracks()[0];
+    imageCapture = new ImageCapture(track);
+  })
+  .catch(error => ChromeSamples.log(error));
+}
+
+function onGrabFrameButtonClick() {
+  imageCapture.grabFrame()
+  .then(imageBitmap => {
+    const canvas = document.querySelector('#grabFrameCanvas');
+    drawCanvas(canvas, imageBitmap);
+  })
+  .catch(error => ChromeSamples.log(error));
+}
+
+function onTakePhotoButtonClick() {
+  imageCapture.takePhoto()
+  .then(blob => createImageBitmap(blob))
+  .then(imageBitmap => {
+    const canvas = document.querySelector('#takePhotoCanvas');
+    drawCanvas(canvas, imageBitmap);
+  })
+  .catch(error => ChromeSamples.log(error));
+}
+
+/* Utils */
+
+function drawCanvas(canvas, img) {
+  canvas.width = getComputedStyle(canvas).width.split('px')[0];
+  canvas.height = getComputedStyle(canvas).height.split('px')[0];
+  let ratio  = Math.min(canvas.width / img.width, canvas.height / img.height);
+  let x = (canvas.width - img.width * ratio) / 2;
+  let y = (canvas.height - img.height * ratio) / 2;
+  canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
+  canvas.getContext('2d').drawImage(img, 0, 0, img.width, img.height,
+      x, y, img.width * ratio, img.height * ratio);
+}
+
+document.querySelector('video').addEventListener('play', function() {
+  document.querySelector('#grabFrameButton').disabled = false;
+  document.querySelector('#takePhotoButton').disabled = false;
+});
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename = 'assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename = 'assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename = 'assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename = 'assets/css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Flattern - v2.1.0
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+<div class="wrapper">
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i><a href="mailto:greenlights.psy@gmail.com">greenlights.psy@gmail.com</a>
+        <i class="icofont-phone"></i> +1 5589 55488 55
+      </div>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{ url_for('index') }}">TRY FIRST</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+      <div align="right">
+        {% extends "nav_bar.html" %}
+        {% block content %}
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+
+  <!-- <main id="main"> -->
+
+    <!-- ======= Breadcrumbs ======= -->
+<!--     <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portolio</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Portolio</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+   End Breadcrumbs -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(https://image.cnbcfm.com/api/v1/image/106520801-1588688351103gettyimages-1210981144.jpeg?v=1588688468&w=1400&h=950);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>Why wear a <span>FACE MASK? </span></h2>
+              <p>Wearing a face mask will help prevent the spread of infection and prevent the individual from contracting any airborne infectious germs.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="background-image: url(https://www.morrishospital.org/wp-content/uploads/2020/04/masks_1.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>How should your face mask be worn?</h2>
+              <p>"Always wash your hands with soap and water before touching the face mask. <span>- WHO"</span></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="background-image: url(https://www.trendinbuzz.com/wp-content/uploads/2020/07/bara-buri-D6mRHVHQg8o-unsplash-min-scaled.jpg);">
+          <div class="carousel-container">
+            <div class="carousel-content animate__animated animate__fadeInUp">
+              <h2>TRY ON FACE MASKS WITH ONE GO</h2>
+              <p>"Try on different masks from a variety of range of patterns and colors at one go.”</p>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-left-arrow" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-right-arrow" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3>Fight<span> COVID-19 Pandemic </span> Together!!</h3>
+            <p>We aim to provide 'try virtually before buy' concept for masks also while promoting Indian brands for masks. Covering face with masks while going outside is one of the guidelines announces by WORLD HEALTH ORGANISATION.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="{{ url_for('blog') }}">KNOW MORE</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+<!--       <div class="container">
+ -->
+        <div class="section-title" data-aos="fade-up">
+          <h1>Check some of <strong>our RESULTS</strong></h1>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Support for both <strong>Single and Multiple-Face Images</strong></h2>
+        </div>        
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up">
+              <div class="icon"><i class="icofont-computer"></i></div>
+              <img src="{{ url_for('static', filename = 'assets/images/IMG-20200830-WA0028.jpg') }}" style="height: 400px; width: 500px" >
+              
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="200" >
+              <div class="icon"><i class="icofont-earth"></i></div>
+              <img src="{{ url_for('static', filename = 'assets/images/i1.jpeg') }}" style="height: 400px; width: 500px" >
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="icofont-computer"></i></div>
+              <img src="{{ url_for('static', filename = 'assets/images/IMG-20200830-WA0029.jpg') }}" style="height: 400px; width: 500px" >
+              
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Support for<strong> Multiple Mask Types - K95, Surgical, Cloth Masks</strong></h2>
+        </div> 
+        
+        <div class="row"> 
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="100">
+              
+              <img src="{{ url_for('static', filename = 'assets/images/s2.jpeg') }}" style="height: 500px; width: 400px">
+              
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="100" >
+             
+              <img src="{{ url_for('static', filename = 'assets/images/s1.jpeg') }}" style="height: 500px; width: 400px" >
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="100">
+              
+              <img src="{{ url_for('static', filename = 'assets/images/s3.jpeg') }}" style="height: 500px; width: 400px" >
+              
+            </div>
+          </div>
+        </div>
+
+        <br>
+        <br>
+
+        <div class="section-title" data-aos="fade-up">
+          <h2><strong>Wide Face angle coverage and brightness corrected mask application</strong></h2>
+        </div> 
+          
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up">
+              
+              <img src="{{ url_for('static', filename = 'assets/images/n2.jpeg') }}" style="height: 300px; width: 450px" >
+              
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="200" >
+             
+              <img src="{{ url_for('static', filename = 'assets/images/n4.jpeg') }}" style="height: 380px; width: 570px" >
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="pic-box" data-aos="fade-up" data-aos-delay="100">
+              
+              <img src="{{ url_for('static', filename = 'assets/images/n3.jpeg') }}" style="height: 300px; width: 450px">
+              
+            </div>
+          </div>
+        </div>  
+
+
+    </section>
+
+    <!--End Services Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="team" style="background-color: #202020">
+    <div class="container">
+<!--     <section id="portfolio" class="portfolio">
+      <div class="container">
+ -->
+        <div class="section-title" data-aos="fade-up">
+          <h1 style="color: white">Try it on <strong> YOURSELF</strong></h1>
+        </div>
+        <div class="row">
+        <div class="col-md-6" class="section-title">
+        <div class="card" style="width:400px">
+          <img class="card-img-top" src="https://i.guim.co.uk/img/media/3d0e3f8fc18b7a9a4d115e5b6c249d46599aef64/101_623_5628_3377/master/5628.jpg?width=445&quality=85&auto=format&fit=max&s=cd170bafe0aa7931dce7bfdddd68d229" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 >Have some Fun !!</h4>
+            <p >Just upload your pic, be it a group photo or an individual and get amazing results !!</p>           
+          </div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="col-md-6">
+          <form method="POST" action="/facemasks_form" enctype="multipart/form-data">
+            <input type="file" name="file" placeholder="upload yr pic" value="" autocomplete="off" required/>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" class='submit' value="Submit" style="color: black;">
+          </form>
+        </div>
+        </div>
+
+    </section><!-- End Portfolio Section -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    {% if text != "none" %}
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="row portfolio-container" data-aos="fade-up">
+
+        {% for mask_name in out_files %}
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <img src="{{ url_for('display_output6', out_files = mask_name) }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{ mask_name |replace(".jpg", "") }}</h4>
+                <p>MASKS</p>
+                <a href="#"><i class="fa fa-heart" style="font-size:24px"></i></a>
+                <a href="{{ url_for('display_output6', out_files = mask_name) }}"  data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="fa fa-cart-plus" style="font-size:26px"></i></a>
+                <a href="{{ url_for('facemask') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+        </div>
+
+        {% endfor %}  
+        </div>
+      </div> 
+    </section><!-- End Portfolio Section --> 
+    {% endif %}
+
+<style>
+  .inputfile + label {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    display: inline-block;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    background-color: red;
+}
+
+.pic-box {
+  padding: 30px 10px 30px 10px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  text-align: center;
+  border: 1px solid #ebe6e4;
+  /*height: 100%;*/
+  /*width: 100%;*/
+  position: relative;
+  background: #faf9f8;
+}
+
+.pic_box:hover {
+/*  background-color: white;
+*/  transform: scale(1.1);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+    /*padding-left: 20%;*/
+  }
+
+  .submit {
+  border: 0;
+  background-color: #FF8C00;  
+  color: white;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.submit:hover {
+  color: white;
+  background-color: #FF8C00;
+  transform: scale(1.1);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+</style>
+   
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>TRY FIRST</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>TRY FIRST</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+   <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename = 'assets/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/venobox/venobox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/aos/aos.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename = 'assets/js/main.js') }}"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+
+</body>
+
+</html>
+
+{% endblock %}

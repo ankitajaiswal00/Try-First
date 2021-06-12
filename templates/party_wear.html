@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+ 
+  <title>Portfolio</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename = 'assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename = 'assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename = 'assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = 'assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename = 'assets/css/style.css') }}" rel="stylesheet">
+ 
+  <!-- =======================================================
+  * Template Name: Flattern - v2.1.0
+  * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+<div class="wrapper">
+
+  <!-- ======= Top Bar ======= -->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="icofont-envelope"></i><a href="mailto:greenlights.psy@gmail.com">greenlights.psy@gmail.com</a>
+        <i class="icofont-phone"></i> +1 5589 55488 55
+      </div>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+        <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+        <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+        <a href="#" class="skype"><i class="icofont-skype"></i></a>
+        <a href="#" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="{{ url_for('index') }}">TRY FIRST</a></h1>
+      </div>
+      <div>
+        {% extends "nav_bar.html" %}
+        {% block content %}
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Portfolio</h2>
+          <ol>
+            <li><a href="{{ url_for('index') }}" target="_blank">Home</a></li>
+            <li>Portfolio</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <style>
+      .hide {
+        display: none;
+      }
+          
+      .myDIV:hover + .hide {
+        display: block;
+        color: red;
+      }
+      .size {
+      height:40% ;
+      width:50% ;
+      }
+      </style>
+
+    <!-- ======= Portfolio Section ======= -->
+<!----------------------FLask Code--------------------------------------------  -->
+<section id="portfolio" class="portfolio">
+
+  <div class="container">
+    <div class = "box">
+      <div class="modal-body row">
+        <div class="col-md-6">
+          <img src ="https://images.pexels.com/photos/2584269/pexels-photo-2584269.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" style="border-spacing: : 0px">
+        </div>
+        <div class="col-md-6" style="color: #008B8B; font-size:35">
+          <form method="POST" action="/party_form" enctype="multipart/form-data">
+            <p style="color: #008B8B; font-size: 50px"><strong>Try it on Yourself!</strong></p>
+            <div>
+              <p class="myDIV"><u><strong>Sample Front Pose</strong></u></p>
+              <div class="hide"><img class="size" src="{{ url_for('static', filename = 'assets/images/model.png') }}"></div>
+            </div>
+            <br>
+            <br>
+            <div>
+              <label for="file"><b>Front Pose</b></label>
+              <input  type="file" name="file" id="file" value="" autocomplete="off" required/>
+            </div> 
+            <br>
+            <br>
+            <div>
+             <label for="height"><b>How Tall Are You?</b></label>
+             <br>
+             <div class="row">
+                <input type="float" name="height" id="height" value="" autocomplete="off" required />
+                <!-- <label for="units"><b>Units</b></label>                -->
+                <select name="unit" id="units">
+                  <option disabled = "disabled" selected="selected">Height Units</option>
+                  <option>Inch</option>
+                  <option>cm</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="submit" value="Show now" class="submit" id="submit" name="GO" onclick="on(); $('#loading').show(); "/>
+                <br>
+                <a href="{{ url_for('services_tryon') }}" target="_blank">MORE DETAILS</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <!-- <div class="main"> -->
+
+ <!--        <div class="container1" style="padding-left: 0px ">
+            <div class="booking-content">
+                <div class="booking-image">
+                    <img class="booking-img" src="{{ url_for('static', filename = 'assets/images/form-img.jpg') }}" alt="Booking Image">
+                </div>
+                <div class="booking-form">
+                    <form id="booking-form" method="POST" action="/party_form" enctype="multipart/form-data">
+                        <h2>Try it on Yourself!</h2>
+                        <div class="form-group form-input">
+                          <p class="myDIV" style="color: #edb77d"><B>Sample Front Pose</B></p>
+                          <div class="hide"><img class="size" src="https://3dlook.me/wp-content/uploads/2019/02/front_photo_3DLOOK.png"></div>
+                            <label for="file">Front Pose</label>                   
+                            <input  type="file" name="file" id="file" value="" autocomplete="off" required>
+                          </div>
+                        
+                          <div class="form-group form-input">                    
+                            <select name="unit">
+                              <option disabled = "disabled" selected="selected">Height Units</option>
+                              <option>Inch</option>
+                              <option>cm</option>
+                            </select>
+                            <input type="float" placeholder="Your Height" name="height" id="height" value="" autocomplete="off" required=""> 
+                          </div>        
+                
+                          <div class="form-submit">
+                            <input type="submit" name="GO" value="Show now" class="submit" id="submit" onclick="on(); $('#loading').show(); ">
+                            <a href="#" class="vertify-booking">To see the img format,CLICK HERE !!</a>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div> -->
+
+    
+     
+
+<div id="overlay" style="text-align: center;">
+<div id="loading" style="display:none; text-align: center;"><img src="{{ url_for('static', filename = 'assets/loading4.gif') }}" alt=""/><br><h3 align="text-center"> MAGIC IS HAPPENING!</h3></div>
+</div>
+
+<br>
+<br>
+
+<div class="container">
+<div class="box2">
+{% if text =="none" %}
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              
+            </ul>
+          </div>
+        </div>
+      <div class="row portfolio-container" data-aos="fade-up">
+
+    {% for cloth_name in party %}
+
+     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <img src="{{ url_for('display_party', party = cloth_name) }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4> {{ cloth_name |replace(".jpg", "") }}</h4>
+              <p>TRENDS</p>
+              <!-- <p>SIZE: {{ size }}</p> -->
+              <a href="#"><i class="fa fa-heart" style="font-size:24px"></i></a>
+              <a href="{{ url_for('display_party', party = cloth_name) }}"  data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="fa fa-cart-plus" style="font-size:26px"></i></a>
+              <a href="{{ url_for('party') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+    {% endfor %}  
+            </div>
+       </div> 
+    </section><!-- End Portfolio Section --> 
+
+{% else %}
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="row" data-aos="fade-up">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              
+            </ul>
+          </div>
+        </div>
+      <div class="row portfolio-container" data-aos="fade-up">
+
+
+    {% for cloth_name in party %}
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="{{ url_for('display_output4', party = cloth_name) }}" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>{{ cloth_name |replace(".jpg","")}}</h4>
+              <p>TRENDS</p>
+              <p>SIZE : {{ size }} </p>
+              <a href="#"><i class="fa fa-heart" style="font-size:24px"></i></a>
+              <a href="{{ url_for('display_output4', party = cloth_name) }}"  data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="fa fa-cart-plus" style="font-size:26px"></i></a>
+              <a href="{{ url_for('party') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+        </div>
+    {% endfor %}  
+          
+              
+           </div>
+        </div>
+    </section><!-- End Portfolio Section -->    
+
+{% endif %}
+
+    </div>
+    </div>
+  </section>
+</main><!-- End #main -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>INSTITUTE</h3>
+            <p>
+              INDIAN INSTITUTE OF TECHNOLOGY, (INDIAN SCHOOL OF MINES) DHANBAD <br>
+              <!-- DHANBAD<br> -->
+              INDIA <br><br>
+              <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
+              <strong>Email:</strong> greenlights.psy@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('index') }}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('about') }}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('services_tryon') }}">TRY ON guide</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('services_sizep') }}">Size Predictor</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('blog') }}">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('services_tryon') }}">TRY APPARELS ON</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">WEB DEVELOPMENT</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{ url_for('services_sizep') }}">SIZE PREDICTION</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">MARKETING</a></li>
+              <!-- <li><i class="bx bx-chevron-right"></i> <a href="#">MODEL </a></li> -->
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Join Our Newsletter</h4>
+            <p>Teck geek?<br>Stay Updated with the World.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Flattern</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+   <!-- Vendor JS Files -->
+  <script src="{{ url_for('static', filename = 'assets/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/venobox/venobox.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/waypoints/jquery.waypoints.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'assets/vendor/aos/aos.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ url_for('static', filename = 'assets/js/main.js') }}"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+<style>
+#overlay {
+  position: fixed;
+  align-items: center;
+  display: none;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*background-color: rgba(0,0,0,0.8);*/
+  z-index: 2;
+  cursor: pointer;
+    margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: black;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.box {
+  
+margin:0; 
+background:#fff;
+border:0px solid #fff;
+filter:  drop-shadow(0 0 20px #333 );
+}
+
+.box2 {
+  
+margin:0 auto; 
+padding:50px;
+background:#fff;
+border:2px solid #fff;
+filter:  drop-shadow(0 0 20px #333 );
+}
+.wrapper {
+
+background-size: cover;
+background-repeat: no-repeat;
+/*background-image: url(https://raw.githubusercontent.com/JaZz-9/Try-First/master/size%20prediction%20form/size%20chart/bg-registration-form-1.jpg);*/
+background-color: #4ABDAC
+}
+
+.submit {
+  border: 0;
+  background: linear-gradient(45deg,#007991,#78ffd6);  
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.submit:hover {
+    transform: scale(1.1);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /*padding-left: 20%;*/
+  }
+</style>
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+// function off() {
+//   document.getElementById("overlay").style.display = "none";
+
+</script>
+
+</body>
+
+</html>
+
+{% endblock %}
