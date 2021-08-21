@@ -1,6 +1,7 @@
 # Try-First
 
-The following project is an implementation of the paper "VITON: An Image-based Virtual Try-on Network" from University of Maryland, College Park, China. https://arxiv.org/abs/1711.08447
+The following project is an implementation of the paper "CP-VTON: Toward Characteristic-Preserving Image-based
+Virtual Try-On Network" by B. Wang et al. https://arxiv.org/pdf/1807.07688.pdf
 
 ## Table of contents
 * [Introduction](#Introduction)
@@ -107,7 +108,7 @@ Mask the Face
 
 
 ## References
-[1] Bochao Wang, Huabin Zheng, Xiaodan Liang, Yimin Chen: Toward Characteristic-Preserving Image-based Virtual Try-On Network (2020). 
+[1] Bochao Wang, Huabin Zheng, Xiaodan Liang, Yimin Chen: Toward Characteristic-Preserving Image-based Virtual Try-On Network (2018). 
 [2] HAN X., WU Z., WU Z., YU R., DAVIS L. S.: Viton: An
 image-based virtual try-on network. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (2018).  
 [3] BROCK A., DONAHUE J., SIMONYAN K.: Large scale GAN
